@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Изображение в качестве ссылки</title>
+    <style>
+        a img {
+            border: none; 
+        }
+    </style>
+</head>
+<body>
+
+<h1>Изображение в качестве ссылки</h1>
+<p>Кроме текста, в качестве ссылок можно использовать и рисунки. Изображение в этом случае надо поместить между тегами <code>&lt;a&gt;</code> и <code>&lt;/a&gt;</code>, как показано в примере 1.</p>
+
+<h2>Пример 1. Создание рисунка-ссылки</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Ссылка&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+   &lt;p&gt;&lt;a href="sample.html"&gt;&lt;img src="images/sample.gif" width="50" height="50" alt="Пример"&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;
+</pre>
+
+<p>В этом примере атрибут <code>href</code> тега <code>&lt;a&gt;</code> задает путь к документу, на который указывает ссылка, а атрибут <code>src</code> тега <code>&lt;img&gt;</code> — путь к графическому файлу.</p>
+
+<h2>Рамка вокруг изображения-ссылки</h2>
+<p>Вокруг изображения-ссылки автоматически добавляется рамка толщиной один пиксел и цветом, совпадающим с цветом текстовых ссылок. Чтобы убрать рамку, следует использовать стилевое свойство <code>border</code>, как показано в примере 2.</p>
+
+<h2>Пример 2. Удаление рамки вокруг изображения</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Ссылка&lt;/title&gt;
+  &lt;style&gt;
+   a img {
+    border: none; /* Убираем рамку */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;&lt;a href="sample.html"&gt;&lt;img src="images/sample.gif" width="50" height="50" alt="Пример"&gt;&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;
+</pre>
+
+
+</body>
+</html>

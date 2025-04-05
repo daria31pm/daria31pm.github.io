@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Атрибут target в ссылках</title>
+</head>
+<body>
+
+<h1>Атрибут target</h1>
+<p>По умолчанию, при переходе по ссылке документ открывается в текущем окне или фрейме. Это поведение можно изменить с помощью атрибута <code>target</code> тега <code>&lt;a&gt;</code>. Этот атрибут может принимать следующие значения:</p>
+<ul>
+    <li><strong>_blank</strong> — загружает страницу в новое окно браузера;</li>
+    <li><strong>_self</strong> — загружает страницу в текущее окно (значение по умолчанию);</li>
+    <li><strong>_parent</strong> — загружает страницу во фрейм-родитель;</li>
+    <li><strong>_top</strong> — отменяет все фреймы и загружает страницу в полном окне браузера.</li>
+</ul>
+
+<h2>Пример 1. Открытие документа в новом окне</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Новое окно&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href="https://webref.ru" target="_blank"&gt;Ссылка открывает новое окно на сайт webref.ru&lt;/a&gt;&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h2>Пример 2. Открытие документа во фрейме</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Открытие файла во фрейме&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;&lt;a href="https://webref.ru" target="newframe"&gt;Сайт webref.ru&lt;/a&gt;&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Ссылка в примере 2 ведет на сайт webref.ru, который открывается во фрейме с именем <code>newframe</code>. Если указано неизвестное значение для <code>target</code>, например, имя фрейма написано с ошибкой, ссылка откроется в новом окне.</p>
+
+<h2>Пример 3. Использование тега &lt;base&gt;</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+ &lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Открытие файла во фрейме&lt;/title&gt;
+  &lt;base target="_blank"&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href="1.html"&gt;Ссылка откроется в новом окне&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="2.html" target="_self"&gt;Ссылка откроется в текущем окне&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Чтобы все ссылки на странице открывались в новом окне, можно использовать тег <code>&lt;base target="_blank"&gt;</code>. Для открытия ссылки в текущем окне можно добавить к тегу <code>&lt;a&gt;</code> атрибут <code>target="_self"</code>.</p>
+
+</body>
+</html>

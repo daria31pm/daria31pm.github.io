@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Три колонки</title>
+    <style>
+        * {
+            box-sizing: border-box; 
+        }
+
+        body {
+            margin: 0; 
+        }
+
+        .column {
+            padding: 10px; 
+        }
+
+        .float-container {
+            overflow: hidden; 
+        }
+
+        #left {
+            float: left; 
+            width: 200px; 
+            background: #ccf;
+            margin-right: 10px; 
+        }
+
+        #center {
+            float: left; 
+            width: calc(100% - 420px); 
+            background: #cfc;
+        }
+
+        #right {
+            float: right; 
+            width: 200px; 
+            background: #fcc;
+            margin-left: 10px; 
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h2> Использование float</h2>
+    <div class="float-container">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+        <div id="right">right<br>right<br>right<br>right</div>
+    </div>
+
+    
+
+</body>
+</html>

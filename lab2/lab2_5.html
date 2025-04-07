@@ -2,87 +2,44 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Форма</title>
+    <title>Карта изображений для заданий</title>
     <style>
-        fieldset {
-            border: none;
-            padding: 0;
-        }
-        legend {
-            display: none;
+        img {
+            max-width: 100%; 
+            height: auto; 
         }
     </style>
 </head>
 <body>
-    <h1>Форма регистрации пользователя</h1>
-    <form action="#" method="post">
+    <h1> Лабораторная работа № 1 </h1>
 
-        <fieldset>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+    <img src="pp.jpg" usemap="#image-map" alt="Задания">
 
-            <label for="password">Пароль:</label>
-            <input type="password" id="password" name="password" placeholder="Придумайте пароль" required><br><br>
+    <map name="image-map">
+        <area target="_blank" alt="Область 1" title="Область 1" href="lab1_1.html" coords="34,133,218,396" shape="rect"> 
+        <area target="_blank" alt="Область 1" title="Область 1" href="lab1_1.html" coords="216,131,298,131,304,218,297,241,249,229,220,245" shape="poly">
+        <area target="_blank" alt="Область 1" title="Область 1" href="lab1_1.html" coords="192,396,141,397,144,423,202,397,198,435,199,475,164,479,136,467,132,432" shape="poly">
+        <area target="_blank" alt="Область 1" title="Область 1" href="lab1_1.html" coords="223,273,230,294,250,297" shape="poly">
+        
+        <area target="_blank" alt="Область 2" title="Область 2" href="lab1_2.html" coords="207,310,209,312" shape="rect">
+        <area target="_blank" alt="Область 2" title="Область 2" href="lab1_2.html" coords="304,131,572,317" shape="rect">
+        <area target="_blank" alt="Область 2" title="Область 2" href="lab1_2.html" coords="224,231,305,296" shape="rect">
+        <area target="_blank" alt="Область 2" title="Область 2" href="lab1_2.html" coords="307,315,406,398" shape="rect">
+        <area target="_blank" alt="Область 2" title="Область 2" href="lab1_2.html" coords="462,317,576,397" shape="rect">
+    
+        <area target="_blank" alt="Область 3" title="Область 3" href="lab1_3.html" coords="207,310,209,312" shape="rect">
+        <area target="_blank" alt="Область 3" title="Область 3" href="lab1_3.html" coords="28,477,298,663" shape="rect">
+        <area target="_blank" alt="Область 3" title="Область 3" href="lab1_3.html" coords="33,397,138,479" shape="rect">
+        <area target="_blank" alt="Область 3" title="Область 3" href="lab1_3.html" coords="298,501,382,565" shape="rect">
+        <area target="_blank" alt="Область 3" title="Область 3" href="lab1_3.html" coords="196,395,299,477" shape="rect">
+    
+        <area target="_blank" alt="Область 4" title="Область 4" href="lab1_4.html" coords="207,310,209,312" shape="rect">
+        <area target="_blank" alt="Область 4" title="Область 4" href="lab1_4.html" coords="378,401,574,665" shape="rect">
+        <area target="_blank" alt="Область 4" title="Область 4" href="lab1_4.html" coords="406,320,467,401" shape="rect">
+        <area target="_blank" alt="Область 4" title="Область 4" href="lab1_4.html" coords="302,397,377,502" shape="rect">
+        <area target="_blank" alt="Область 4" title="Область 4" href="lab1_4.html" coords="302,563,380,667" shape="rect">
+    </map>
+    
 
-            <label for="birthdate">Год рождения:</label>
-            <select id="birthdate_year" name="birthdate_year">
-                <option value="">Год</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
-                <option value="2015">2015</option>
-                <option value="2014">2014</option>
-                <option value="2013">2013</option>
-                <option value="2012">2012</option>
-                <option value="2011">2011</option>
-                <option value="2010">2010</option>
-                <option value="2009">2009</option>
-                <option value="2008">2008</option>
-                <option value="2007">2007</option>
-                <option value="2006">2006</option>
-                <option value="2005">2005</option>
-                <option value="2004">2004</option>
-                <option value="2003">2003</option>
-                <option value="2002">2002</option>
-                <option value="2001">2001</option>
-                <option value="2000">2000</option>
-                <option value="1999">1999</option>
-                <option value="1998">1998</option>
-                <option value="1997">1997</option>
-                <option value="1996">1996</option>
-                <option value="1995">1995</option>
-                <option value="1994">1994</option>
-                <option value="1993">1993</option>
-                <option value="1992">1992</option>
-                <option value="1991">1991</option>
-                <option value="1990">1990</option>
-              </select>
-              <br>
-
-        </fieldset>
-
-        <fieldset>
-            <p>Пол:</p>
-            <label><input type="radio" name="gender" value="male" id = "male"> Мужской</label><br>
-            <label><input type="radio" name="gender" value="female" id = "female"> Женский</label><br><br>
-
-            <p>Предпочитаемые языки:</p>
-            <label><input type="checkbox" name="languages" value="russian" checked disabled> Русский</label><br>
-            <label><input type="checkbox" name="languages" value="english"> Английский</label><br>
-            <label><input type="checkbox" name="languages" value="spanish"> Испанский</label><br><br>
-
-            <label for="bio">О себе:</label><br>
-            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Расскажите о себе"></textarea><br><br>
-        </fieldset>
-
-        <input type="submit" value="Готово">
-        <input type="reset" value="Очистить">
-    </form>
 </body>
 </html>

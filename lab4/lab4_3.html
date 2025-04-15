@@ -6,71 +6,84 @@
     <title>Оформление вертикального меню</title>
     <style>
         html {
-            background: #dfd7d7;
+            background: #f0f0f0;
         }
 
         .menu {
             width: 200px;
-            background: #ffffff;
-            font-family: Arial, sans-serif;
+            height: 450px;
+
+            background: #fff;
+
+            padding-top: 5px;
+
         }
 
         .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+            /* list-style-image: url(src/pic/minus.gif); */
+            list-style-type: none;
+            margin-bottom: 10px;
 
-        .menu li {
+            padding-left: 30px;
             position: relative;
         }
 
-        .menu li > a {
-            display: block;
-            text-decoration: none;
-            color: #333;
-            padding-left: 30px;  
-            transition: background-color 0.3s;
-            position: relative; 
-        }
-
-        .menu li > a::before {
+        .menu li::before {
             content: '';
-            display: inline-block;
-            width: 16px; 
-            height: 16px; 
-            background-image: url("css_sprites.png"); 
-            background-position: -10px -10px; 
-            margin-right: 5px;
-
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: url("src/css_sprites.png") no-repeat -10px -10px;
+            left: 10px;
+        
         }
 
-        .menu li li a {
-            display: block;
-            text-decoration: none;
-            color: #333;
-            padding-left: 30px;  
-            transition: background-color 0.3s;
-            position: relative; 
+        .menu li li {
+            margin-left: -10px;
+            position: relative;
         }
 
-        .menu li li a::before {
+        .menu li li::before {
             content: '';
-            display: inline-block;
-            width: 16px; 
-            height: 16px; 
-            background-image: url("css_sprites.png"); 
-            background-position: -10px -82px; 
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: url("src/css_sprites.png") no-repeat -10px -46px;
+           
+            left: -20px;
+        }
+
+        .menu li a {
+            display: block;
+            color: #369;
 
         }
 
         .menu li a:hover {
-            background-color: #f0f0f0;
+            color: #6092c4;
         }
 
-        .menu ul ul {
-            padding-left: 30px;
+       
+
+        /* CSS sprites */
+        .bg-minus {
+            width: 16px;
+            height: 16px;
+            background: url('src/css_sprites.png') -10px -10px;
         }
+
+        .bg-plus {
+            width: 16px;
+            height: 16px;
+            background: url('src/css_sprites.png') -46px -10px;
+        }
+
+        .bg-point {
+            width: 16px;
+            height: 16px;
+            background: url('src/css_sprites.png') -10px -46px;
+        }
+
     </style>
 </head>
 

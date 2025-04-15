@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
-    <title>Три колонки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование flex при построении колонок</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
+        
+        .container {
+            display: flex;
+            justify-content: space-between;  /* space-between, space-around */
+            align-content: flex-start;
+            /* flex-direction: row; */
+            flex-flow: nowrap row;
+        }
+        
+        #left,
+        #right,
+        #center {
+            /* display: inline-block;
+            vertical-align: top; */
+            flex: 0 auto;
+            box-sizing: border-box;
+
         }
 
-        .flex-container {
-            display: flex; 
-            justify-content: space-between; 
-            padding: 10px; 
+        #left {
+            background: #ccf;
+            width: 200px;
+
+            order: 1;
         }
 
-        .flex-item {
-            padding: 10px; 
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+        #right {
+            background: #fcc;
+            width: 200px;
+
+            order: 3;
         }
 
-        #left-flex {
-            width: 200px; 
-            background: #ccf; 
-        }
+        #center {
+            background: #cfc;
+            width: 600px;
 
-        #center-flex {
-            flex-grow: 1;
-            background: #cfc; 
-            margin: 0 10px; 
-        }
-
-        #right-flex {
-            width: 200px; 
-            background: #fcc; 
+            order: 2;
         }
     </style>
 </head>
+
 <body>
-    <h2> Использование flexbox</h2>
-    <div class="flex-container">
-        <div id="left-flex" class="flex-item">left<br>left<br>left<br>left<br>left</div>
-        <div id="center-flex" class="flex-item">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
-        <div id="right-flex" class="flex-item">right<br>right<br>right<br>right</div>
+    <div class="container">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="right">right<br>right<br>right<br>right</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text</div>
     </div>
-
-
-
 </body>
+
 </html>

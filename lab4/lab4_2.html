@@ -6,56 +6,48 @@
     <title>Оформление вертикального меню</title>
     <style>
         html {
-            background: #dfd7d7;
+            background: #f0f0f0;
         }
 
         .menu {
             width: 200px;
-            background: #ffffff;
-            font-family: Arial, sans-serif;
+            height: 450px;
+
+            background: #fff;
+
+            padding-top: 5px;
+
         }
 
         .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            list-style-image: url(src/pic/minus.gif);
+            margin-bottom: 10px;
+            
+            padding-left: 30px;
         }
-
+/* 
         .menu li {
-            position: relative;
-        }
+            padding: 8px 0;
+        } */
 
-        .menu li>a {
+        .menu li a {
             display: block;
-            padding: 1px 12px;
-            text-decoration: none;
-            color: #333;
-            background-image: url("pic/minus.gif");
-            background-repeat: no-repeat;
-            background-position: 5px center; 
-            padding-left: 30px;  
-            transition: background-color 0.3s;
-        }
+            color: #369;
 
-        .menu li li a {
-            display: block;
-            padding: 1px 12px;
-            text-decoration: none;
-            color: #333;
-            background-image: url("pic/point.gif");
-            background-repeat: no-repeat;
-            background-position: 5px center; 
-            padding-left: 30px;  
-            transition: background-color 0.3s;
         }
-
 
         .menu li a:hover {
-            background-color: #f0f0f0;
+            color: #6092c4;
         }
 
-        .menu ul ul {
-            padding-left: 30px;
+        .menu li ul {
+            list-style-image: url(src/pic/point.gif);
+
+
+        }
+
+        .menu li li {
+            margin-left: -10px;
         }
     </style>
 </head>

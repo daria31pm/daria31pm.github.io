@@ -4,66 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Оформление вертикального меню</title>
+
+    <!-- connect font awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <style>
         html {
-            background: #dfd7d7;
+            background: #f0f0f0;
         }
 
         .menu {
             width: 200px;
-            background: #ffffff;
-            font-family: Arial, sans-serif;
+            height: 450px;
+
+            background: #fff;
+
+            padding-top: 5px;
+
         }
 
         .menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+            /* list-style-image: url(src/pic/minus.gif); */
+            list-style-type: none;
+            margin-bottom: 10px;
 
-        .menu li {
+            padding-left: 30px;
             position: relative;
         }
 
-        .menu li > a {
-            display: block;
-            padding: 1px 12px;
-            text-decoration: none;
-            color: #333;
-            background-image: url("pic/plus.gif"); 
-            background-repeat: no-repeat;
-            background-position: 5px center;
-            padding-left: 30px;
-            transition: background-color 0.3s, background-image 0.3s; 
+        .menu li::before {
+            content: '\f196'; /* \'f0fe' */
+            font-family: FontAwesome;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
+            left: 10px;
+
         }
 
-        .menu li li a {
+        .menu li li {
+            margin-left: -10px;
+            position: relative;
+
+            display: none;
+            top: 0;
+        }
+
+        .menu li li::before,
+        .menu li li:hover::before {
+            content: '\f192';
+            font-family: FontAwesome;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            /* background: url("src/css_sprites.png") no-repeat -10px -46px; */
+
+            left: -20px;
+        }
+
+        .menu li a {
             display: block;
-            padding: 1px 12px;
-            text-decoration: none;
-            color: #333;
-            background-image: url("pic/point.gif");
-            background-repeat: no-repeat;
-            background-position: 5px center;
-            padding-left: 30px;
-            transition: background-color 0.3s;
+            color: #369;
+
         }
 
         .menu li a:hover {
-            background-color: #f0f0f0;
+            color: #6092c4;
         }
 
-        .menu ul ul {
-            display: none;
-            padding-left: 30px;
-        }
-
-        .menu li:hover > ul {
+        .menu li:hover li {
             display: block;
         }
 
-        .menu li:hover > a {
-            background-image: url("pic/minus.gif"); 
+
+        .menu li:hover::before {
+            content: '\f147';
+            font-family: FontAwesome;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
+            left: 10px;
         }
     </style>
 </head>

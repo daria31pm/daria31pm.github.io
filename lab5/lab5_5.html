@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
-    <title>Три колонки</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 10px; 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Использование grid при построении колонок</title>
+    <style>  
+        .container {
+            display: grid;
+            grid-template-columns: 200px 600px 200px;
+            grid-gap: 10px;
+            justify-content: space-between; /* center */
+        }
+        
+        #left,
+        #right,
+        #center {
+            flex: 0 auto;
+            box-sizing: border-box;
+
         }
 
-        .grid-container {
-            display: grid; 
-            grid-template-columns: 200px 1fr 200px; 
-            gap: 10px; 
+        #left {
+            background: #ccf;
+            /* width: 200px; */
+
+            order: 1;
         }
 
-        .grid-item {
-            padding: 10px; 
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+        #right {
+            background: #fcc;
+            /* width: 200px; */
+
+            order: 3;
         }
 
-        #left-inline {
-            background: #ccf; 
-        }
-
-        #center-inline {
+        #center {
             background: #cfc;
-        }
+            /* width: 600px; */
 
-        #right-inline {
-            background: #fcc; 
+            order: 2;
         }
     </style>
 </head>
+
 <body>
-    <h2>Использование grid</h2>
-    <div class="grid-container">
-        <div id="left-inline" class="grid-item">left<br>left<br>left<br>left<br>left</div>
-        <div id="center-inline" class="grid-item">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
-        <div id="right-inline" class="grid-item">right<br>right<br>right<br>right</div>
+    <div class="container">
+        <div id="left">left<br>left<br>left<br>left<br>left</div>
+        <div id="right">right<br>right<br>right<br>right</div>
+        <div id="center">center text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text text text text text text text
+            text
+            text text text text text text text text text text text text text text text</div>
     </div>
 </body>
+
 </html>

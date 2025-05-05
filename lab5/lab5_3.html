@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Использование inline-block при построении колонок</title>
-
-    <style>
-        .wrap {
-            min-width: 1040px;
+    <style type="text/css">
+        .wrapper {
+            min-width: 1000px;
+            /* font-size: 0; */
+            /* почему-то колонки пропадают из-за font-size  */
         }
 
         #left,
@@ -16,37 +16,29 @@
         #center {
             display: inline-block;
             vertical-align: top;
-
-            box-sizing: border-box;
-
         }
 
         #left {
             background: #ccf;
             width: 200px;
-
-            /* float: left; */
             margin-right: 10px;
         }
 
         #right {
             background: #fcc;
             width: 200px;
-
-            /* float: right; */
             margin-left: 10px;
         }
 
         #center {
             background: #cfc;
             width: 600px;
-
         }
     </style>
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrapper">
         <div id="left">left<br>left<br>left<br>left<br>left</div>
         <div id="center">center text text text text text text text text text text text text text text text text text
             text

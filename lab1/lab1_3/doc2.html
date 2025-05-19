@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Цвет ссылок</title>
+    <meta charset="UTF-8">
+    <title>Цвет ссылок</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: rgb(207, 190, 190); 
+            color: rgb(0, 0, 0); 
+        }
+        a {
+            color: red; 
+        }
+        a:visited {
+            color: #cecece; 
+        }
+        a:active {
+            color: #ff0000; 
+        }
+    </style>
 </head>
 <body>
-<h1>Цвет ссылок</h1>
-<p>Цвета ссылок задаются в качестве атрибутов тега <code>&lt;body&gt;</code>. 
- Атрибуты являются необязательными и если они не указаны используются 
-  значения по умолчанию.</p>
-<p><code>link</code> &#8212; определяет цвет ссылок на веб-странице 
-  (цвет по умолчанию синий, #0000FF).</p>
 
-<p><code>alink</code> &#8212; цвет активной ссылки. Цвет ссылки 
-  меняется при нажатии на ней кнопки мыши. Цвет по умолчанию красный, 
-  #FF0000.  </p>
-<p><code>vlink</code> &#8212; цвет уже посещенных ссылок. Цвет 
-  по умолчанию фиолетовый, #800080.</p>
-<p>В HTML цвета задаются обычно цифрами в шестнадцатеричном коде, в виде <code>#rrggbb</code>, 
-  где r, g и b обозначают соответственно красную, зеленую и синюю составляющую. 
-  Для каждого цвета задается шестнадцатеричное значение от 00 до FF, что соответствует 
-  диапазону от 0 до 255 в десятичном исчислении. Затем эти значения объединяются 
-  в одно число, перед которым ставится символ # (пример&nbsp;1).</p>
+<h1>Цвета ссылок в HTML</h1>
+<p>Цвета ссылок задаются с помощью атрибутов тега <code>&lt;body&gt;</code>. Если они не указаны, используются значения по умолчанию:</p>
+<ul>
+    <li><strong>link</strong> — определяет цвет обычных ссылок (по умолчанию синий, <code>#0000FF</code>).</li>
+    <li><strong>vlink</strong> — цвет уже посещенных ссылок (по умолчанию фиолетовый, <code>#800080</code>).</li>
+    <li><strong>alink</strong> — цвет активной ссылки (по умолчанию красный, <code>#FF0000</code>).</li>
+</ul>
 
-<p>Пример 1. Задание цветов ссылок</p>
+<p>Цвета могут задаваться в шестнадцатеричном формате или с использованием ключевых слов. В следующем примере цвет фона веб-страницы установлен черным, а цвет ссылок — красным.</p>
 
-<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
- &lt;html&gt;
-  &lt;head&gt;
-  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-
+<h2>Пример 1. Задание цветов ссылок</h2>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
   &lt;title&gt;Цвет ссылок&lt;/title&gt;
  &lt;/head&gt;
- &lt;body link=&quot;red&quot; vlink=&quot;#cecece&quot; alink=&quot;#ff0000&quot; bgcolor=&quot;black&quot;&gt;
+ &lt;body link="red" vlink="#cecece" alink="#ff0000" bgcolor="black"&gt;
 
-  &lt;p&gt;&lt;a href=&quot;content.html&quot;&gt;Содержание сайта&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="content.html"&gt;Содержание сайта&lt;/a&gt;&lt;/p&gt;
  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-<p>Цвет не обязательно задавать в шестнадцатеричном формате, можно использовать 
-  и ключевые слова. В данном примере цвет фона веб-страницы установлен черным, 
-  а цвет ссылок&nbsp;&#8212; красным. </p>
+&lt;/html&gt;
+</pre>
 
 </body>
 </html>

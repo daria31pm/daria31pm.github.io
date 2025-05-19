@@ -12,20 +12,14 @@
         .menu {
             width: 200px;
             height: 450px;
-
             background: #fff;
-
             padding-top: 5px;
-
         }
 
         .menu ul {
-            /* list-style-image: url(src/pic/minus.gif); */
-            list-style-type: none;
+            list-style: none;
             margin-bottom: 10px;
-
             padding-left: 30px;
-            position: relative;
         }
 
         .menu li::before {
@@ -33,10 +27,19 @@
             width: 16px;
             height: 16px;
             position: absolute;
-            background: url("src/css_sprites.png") no-repeat -10px -10px;
+            background: url("css_sprites.png") no-repeat -10px -10px;
             left: 10px;
-        
+
         }
+
+        .menu li a {
+            display: block;
+            color: #336699;
+        }
+
+        /* .menu li a:hover {}
+
+        .menu li ul {} */
 
         .menu li li {
             margin-left: -10px;
@@ -48,42 +51,27 @@
             width: 16px;
             height: 16px;
             position: absolute;
-            background: url("src/css_sprites.png") no-repeat -10px -46px;
-           
+            background: url("css_sprites.png") no-repeat -10px -46px;
             left: -20px;
         }
 
-        .menu li a {
-            display: block;
-            color: #369;
-
-        }
-
-        .menu li a:hover {
-            color: #6092c4;
-        }
-
-       
-
-        /* CSS sprites */
         .bg-minus {
             width: 16px;
             height: 16px;
-            background: url('src/css_sprites.png') -10px -10px;
+            background: url('css_sprites.png') -10px -10px;
         }
 
         .bg-plus {
             width: 16px;
             height: 16px;
-            background: url('src/css_sprites.png') -46px -10px;
+            background: url('css_sprites.png') -46px -10px;
         }
 
         .bg-point {
             width: 16px;
             height: 16px;
-            background: url('src/css_sprites.png') -10px -46px;
+            background: url('css_sprites.png') -10px -46px;
         }
-
     </style>
 </head>
 

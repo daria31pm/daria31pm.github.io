@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Оформление вертикального меню</title>
-
-    <!-- connect font awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
         html {
             background: #f0f0f0;
@@ -18,20 +14,14 @@
         .menu {
             width: 200px;
             height: 450px;
-
             background: #fff;
-
             padding-top: 5px;
-
         }
 
         .menu ul {
-            /* list-style-image: url(src/pic/minus.gif); */
-            list-style-type: none;
+            list-style: none;
             margin-bottom: 10px;
-
             padding-left: 30px;
-            position: relative;
         }
 
         .menu li::before {
@@ -40,10 +30,17 @@
             width: 16px;
             height: 16px;
             position: absolute;
-            /* background: url("src/css_sprites.png") no-repeat -10px -10px; */
             left: 10px;
-
         }
+
+        .menu li a {
+            display: block;
+            color: #336699;
+        }
+
+        /* .menu li a:hover {} */
+
+        /* .menu li ul {} */
 
         .menu li li {
             margin-left: -10px;
@@ -56,19 +53,7 @@
             width: 16px;
             height: 16px;
             position: absolute;
-            /* background: url("src/css_sprites.png") no-repeat -10px -46px; */
-
             left: -20px;
-        }
-
-        .menu li a {
-            display: block;
-            color: #369;
-
-        }
-
-        .menu li a:hover {
-            color: #6092c4;
         }
     </style>
 </head>

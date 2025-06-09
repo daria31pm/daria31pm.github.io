@@ -89,14 +89,14 @@ function getFixedTime() {
 }
 
 /**
- * Форматирует дату в формате ДД.ММ.ГГГГ (без учета локали)
+ * Форматирует дату в формате ДД.ММ.ГГ (без учета локали)
  * @param {Date} date - Объект Date для форматирования
- * @return {string} Отформатированная строка с датой
+ * @return {string} Отформатированная строка с датой (дд.мм.гг)
  */
 function formatDateFixed(date) {
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
-    const year = date.getFullYear();
+    const year = String(date.getFullYear()).slice(-2); // Берем последние 2 цифры года
     return `${day}.${month}.${year}`;
 }
 

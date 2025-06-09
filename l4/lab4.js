@@ -51,7 +51,20 @@ class Book {
     }
 }
 
+// Функция для получения фиксированного времени
+function getFixedTime() {
+    const now = new Date();
+    return now.toLocaleTimeString('ru-RU', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    });
+}
+
 try {
+    console.log(`Текущее время: ${getFixedTime()}`);
+    
     let book1 = new Book('1984', 1949, 1000);
     book1.show();
     book1.price = 1900;
@@ -71,7 +84,6 @@ try {
         books[i].show();
     }
 
-
     function isEmpty(obj) {
         if (typeof obj !== 'object' || obj === null) return true;
 
@@ -86,8 +98,6 @@ try {
 
     console.log("Объект 1", isEmpty(obj1));
     console.log("Объект 2", isEmpty(obj2));
-
-
 
     let classObject = {
         className: "open menu",
@@ -119,13 +129,11 @@ try {
     classObject.removeClass('menu');
     console.log("className после removeClass('menu'):", classObject.className);
 
-
     let jsonString = JSON.stringify(classObject, null, 2);
     console.log("JSON строка:", jsonString);
 
     let object2 = JSON.parse(jsonString);
     console.log('Сравнение объектов из JSON:', JSON.stringify(object2) === JSON.stringify(classObject));
-
 
     function getSecondsToday() {
         let now = new Date();
@@ -134,7 +142,6 @@ try {
     }
 
     console.log("Секунд с начала дня: ", getSecondsToday());
-
 
     function formatDate(date) {
         return date.toLocaleDateString();
@@ -147,6 +154,8 @@ try {
     console.log("Дата 1:", formatDate(date1));
     console.log("Дата 2:", formatDate(date2));
     console.log("Дата 3:", formatDate(date3));
+    
+    console.log(`Время завершения: ${getFixedTime()}`);
 } catch (error) {
     console.error("Произошла ошибка:", error.message);
 }

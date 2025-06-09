@@ -51,7 +51,7 @@ class Book {
     }
 }
 
-// Функция для получения времени в фиксированном формате (без локали)
+// время без локали
 function getFixedTime() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
@@ -60,7 +60,7 @@ function getFixedTime() {
     return `${hours}:${minutes}:${seconds}`;
 }
 
-// Функция для форматирования даты в фиксированном формате (без локали)
+// дата без локали
 function formatDateFixed(date) {
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');

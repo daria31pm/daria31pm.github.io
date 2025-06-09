@@ -211,9 +211,9 @@ try {
     let date2 = new Date(2000, 11, 1); 
     let date3 = new Date(1995, 9, 10); 
 
-    console.log("Дата 1:", formatDateFixed(date1));
-    console.log("Дата 2:", formatDateFixed(date2));
-    console.log("Дата 3:", formatDateFixed(date3));
+    console.log("Дата 1:", formatDateFixed(date1)); // 20.01.24
+    console.log("Дата 2:", formatDateFixed(date2)); // 01.12.00
+    console.log("Дата 3:", formatDateFixed(date3)); // 10.10.95
     
     console.log(`Время завершения: ${getFixedTime()}`);
 } catch (error) {
